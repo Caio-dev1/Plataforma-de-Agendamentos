@@ -3,7 +3,7 @@ body {
     padding: 0;
     height: 100vh;
     background: linear-gradient(270deg, rgba(217,217,217,0.12) 0%, rgba(36,72,125,0.95) 100%),
-                url("../img/imagemBackground.png") center/cover no-repeat;
+                url("/img/imagemBackground.png") center/cover no-repeat;
     background-blend-mode: multiply;
     font-family: 'Inter', sans-serif;
 }

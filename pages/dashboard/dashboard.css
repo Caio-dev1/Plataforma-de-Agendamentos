@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(90deg, #D9D9D9 0%, #284B86 100%),
+              url("/img/imagemBackground2.png") center/cover no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-blend-mode: multiply;
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboardSidebar {
+  position: relative;
+  width: 376px;
+  height: 974px;
+  background: linear-gradient(90deg, #FDFDFD 0%, #CFCFCF 100%);
+  box-shadow: inset 0px -10px 7.3px 2px rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  margin: 29px 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 29px;
+}
+
+.searchBar {
+  width: 659px;
+  height: 43px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #9C9C9C 100%);
+  border: 3px solid #8199BA;
+  box-shadow:
+    0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 3px 8.9px rgba(0, 0, 0, 0.73);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.calendar {
+  width: 662px;
+  height: 490px;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #FFFFFF 0%, #D6E0F2 100%);
+  border: 3px solid #8199BA;
+  box-shadow:
+    inset 0px 4px 16.2px 5px rgba(0, 0, 0, 0.5),
+    inset 0px -10px 7.3px 2px rgba(255, 255, 255, 0.25);
+  color: #1E2E4D;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.calendar th {
+  background-color: #8199BA;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.calendar td {
+  width: 14.28%;
+  height: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  vertical-align: top;
+  padding: 8px;
+}
+
+.calendar .prev-month,
+.calendar .next-month {
+  background-color: #F1F1F1;
+  color: #A0A0A0;
+}
+
+.calendar th[colspan="7"] {
+  background: none;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 0;
+}
+
