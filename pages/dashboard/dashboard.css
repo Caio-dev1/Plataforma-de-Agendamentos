@@ -1,6 +1,3 @@
-* {
-  box-sizing: border-box;
-}
 
 body {
   margin: 0;
@@ -56,40 +53,90 @@ main {
   border-radius: 8px;
   overflow: hidden;
   background: linear-gradient(180deg, #FFFFFF 0%, #D6E0F2 100%);
-  border: 3px solid #8199BA;
   box-shadow:
     inset 0px 4px 16.2px 5px rgba(0, 0, 0, 0.5),
     inset 0px -10px 7.3px 2px rgba(255, 255, 255, 0.25);
   color: #1E2E4D;
   font-family: 'Inter', sans-serif;
   text-align: center;
+
 }
 
 .calendar th {
-  background-color: #8199BA;
+  color: #FFFFFF;
+  background-color: #2A4B7C;
   padding: 10px;
   font-size: 16px;
-  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-weight: 500;
 }
 
 .calendar td {
-  width: 14.28%;
-  height: 80px;
+  width: 10%;
+  height: auto;
+  color: #2A4B7C;
   border: 1px solid rgba(0, 0, 0, 0.2);
   vertical-align: top;
-  padding: 8px;
+  text-align: left;
+  padding: 5px;
+  font-size: 16px;
 }
-
 .calendar .prev-month,
 .calendar .next-month {
-  background-color: #F1F1F1;
-  color: #A0A0A0;
+  background-color: #8199BA;
+  color: #2A4B7C;
 }
 
 .calendar th[colspan="7"] {
+  color: #1E2E4D;
   background: none;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 15px 0;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px 15px 0 0;
+  text-align: left;
+}
+.calendarWrapper {
+  border: 3px solid #8199BA;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 0;
+  overflow: hidden;
 }
 
+.calendarOptions {
+  display: flex;
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.calendarOptionPdf {
+  width: 165px;
+  height: 42px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 17px;
+  background: linear-gradient(to bottom, #FDFDFD 0%, #A1A1A1 100%);
+  border: 2px solid #777777;
+  box-shadow: inset 0px -10px 10.8px -2px rgba(255, 255, 255, 0.81);
+  cursor: pointer;
+  font-family: 'Inter';
+  color: #525252;
+}
+
+.calendarOptionPrint {
+  width: 165px;
+  height: 42px;
+  border-radius: 14px;
+  font-weight: 600; 
+  font-size: 16px;
+  color: #FFFFFF;
+  background: linear-gradient(to bottom, #2C5179 0%, #3F77B4 100%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  box-shadow: inset 0px 8px 5.9px rgba(255, 255, 255, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-family: 'Inter';
+  color: #FDFDFD;
+}
