@@ -1,22 +1,21 @@
-
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
   display: flex;
   flex-direction: row;
-  background: linear-gradient(90deg, #D9D9D9 0%, #284B86 100%),
-              url("/img/imagemBackground2.png") center/cover no-repeat;
+  background: linear-gradient(90deg, #d9d9d9 0%, #284b86 100%),
+    url("/img/imagemBackground2.png") center/cover no-repeat;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-blend-mode: multiply;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .dashboardSidebar {
   position: relative;
   width: 376px;
   height: 974px;
-  background: linear-gradient(90deg, #FDFDFD 0%, #CFCFCF 100%);
+  background: linear-gradient(90deg, #fdfdfd 0%, #cfcfcf 100%);
   box-shadow: inset 0px -10px 7.3px 2px rgba(255, 255, 255, 0.25);
   border-radius: 8px;
   margin: 29px 0 0 25px;
@@ -32,15 +31,15 @@ main {
   flex-direction: column;
   align-items: flex-start;
   padding: 29px;
+  padding-top: 5rem;
 }
 
 .searchBar {
   width: 659px;
   height: 43px;
-  background: linear-gradient(180deg, #FFFFFF 0%, #9C9C9C 100%);
-  border: 3px solid #8199BA;
-  box-shadow:
-    0px 4px 4px rgba(0, 0, 0, 0.25),
+  background: linear-gradient(180deg, #ffffff 0%, #9c9c9c 100%);
+  border: 3px solid #8199ba;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
     inset 0px 3px 8.9px rgba(0, 0, 0, 0.73);
   border-radius: 8px;
   margin-bottom: 20px;
@@ -52,19 +51,17 @@ main {
   border-collapse: collapse;
   border-radius: 8px;
   overflow: hidden;
-  background: linear-gradient(180deg, #FFFFFF 0%, #D6E0F2 100%);
-  box-shadow:
-    inset 0px 4px 16.2px 5px rgba(0, 0, 0, 0.5),
+  background: linear-gradient(180deg, #ffffff 0%, #d6e0f2 100%);
+  box-shadow: inset 0px 4px 16.2px 5px rgba(0, 0, 0, 0.5),
     inset 0px -10px 7.3px 2px rgba(255, 255, 255, 0.25);
-  color: #1E2E4D;
-  font-family: 'Inter', sans-serif;
+  color: #1e2e4d;
+  font-family: "Inter", sans-serif;
   text-align: center;
-
 }
 
 .calendar th {
-  color: #FFFFFF;
-  background-color: #2A4B7C;
+  color: #ffffff;
+  background-color: #2a4b7c;
   padding: 10px;
   font-size: 16px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -74,35 +71,105 @@ main {
 .calendar td {
   width: 10%;
   height: auto;
-  color: #2A4B7C;
+  color: #2a4b7c;
   border: 1px solid rgba(0, 0, 0, 0.2);
   vertical-align: top;
   text-align: left;
   padding: 5px;
   font-size: 16px;
 }
+
 .calendar .prev-month,
 .calendar .next-month {
-  background-color: #8199BA;
-  color: #2A4B7C;
+  background-color: #8199ba;
+  color: #2a4b7c;
 }
 
 .calendar th[colspan="7"] {
-  color: #1E2E4D;
+  color: #1e2e4d;
   background: none;
   font-size: 22px;
   font-weight: 600;
   padding: 20px 15px 0 0;
   text-align: left;
 }
-.calendarWrapper {
-  border: 3px solid #8199BA;
-  border-radius: 8px;
-  display: inline-block;
-  padding: 0;
-  overflow: hidden;
+
+.calendarIcon {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
 }
 
+.calendarArea {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.calendarWrapper {
+  border: 3px solid #8199ba;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, #d6e0f2 100%);
+  box-shadow: inset 0px 4px 16.2px 5px rgba(0, 0, 0, 0.5),
+    inset 0px -10px 7.3px 2px rgba(255, 255, 255, 0.25);
+}
+
+.eventList {
+  width: 302px;
+  max-height: 490px;
+  overflow-y: auto;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  padding: 0;
+}
+
+.event {
+  width: 100%;
+  box-sizing: border-box;
+  height: 131px;
+  border-radius: 14px;
+  color: #1E2E4D;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(180deg, #FDFDFD 0%, rgba(190, 190, 190, 0.75) 100%);
+  box-shadow:
+    inset 0px -10px 10.8px -2px rgba(255, 255, 255, 0.81),
+    inset 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+.event strong {
+  color: #2a4b7c;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.event p {
+  font-size: 14px;
+  margin: 1px 0;
+}
+
+.eventList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.eventList::-webkit-scrollbar-thumb {
+  background-color: #8199ba;
+  border-radius: 3px;
+}
+
+.eventList {
+  scrollbar-width: thin;
+  scrollbar-color: #8199ba transparent;
+}
 .calendarOptions {
   display: flex;
   gap: 20px;
@@ -115,11 +182,11 @@ main {
   border-radius: 14px;
   font-weight: 600;
   font-size: 17px;
-  background: linear-gradient(to bottom, #FDFDFD 0%, #A1A1A1 100%);
+  background: linear-gradient(to bottom, #fdfdfd 0%, #a1a1a1 100%);
   border: 2px solid #777777;
   box-shadow: inset 0px -10px 10.8px -2px rgba(255, 255, 255, 0.81);
   cursor: pointer;
-  font-family: 'Inter';
+  font-family: "Inter";
   color: #525252;
 }
 
@@ -127,16 +194,16 @@ main {
   width: 165px;
   height: 42px;
   border-radius: 14px;
-  font-weight: 600; 
+  font-weight: 600;
   font-size: 16px;
-  color: #FFFFFF;
-  background: linear-gradient(to bottom, #2C5179 0%, #3F77B4 100%);
+  color: #ffffff;
+  background: linear-gradient(to bottom, #2c5179 0%, #3f77b4 100%);
   border: 2px solid transparent;
   background-clip: padding-box;
   position: relative;
   box-shadow: inset 0px 8px 5.9px rgba(255, 255, 255, 0.25),
     0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  font-family: 'Inter';
-  color: #FDFDFD;
+  font-family: "Inter";
+  color: #fdfdfd;
 }
