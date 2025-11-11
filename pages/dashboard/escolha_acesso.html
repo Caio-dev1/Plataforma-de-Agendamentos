@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AD Camaragibe - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <div class="logo-area">
+        <img src="https://github.com/Caio-dev1/Plataforma-de-Agendamentos/blob/main/img/IconeIgrejaVer2.png?raw=true" 
+             alt="Logo AD Camaragibe" class="logo">
+        <p>Seja bem-vindo</p>
+      </div>
+
+      <div class="login-box">
+        <div class="icon-top">
+          <img src="https://github.com/Caio-dev1/Plataforma-de-Agendamentos/blob/main/img/IconeIgrejaVer2.png?raw=true" 
+               alt="Logo AD Camaragibe">
+        </div>
+
+        <p class="login-text">
+          Você deseja acessar como<br>
+          <strong>usuário</strong> ou <strong>administrador?</strong>
+        </p>
+
+        <button class="btn btn-user">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAADVklEQVR4nO3dS2yNQRTA8RPv2HlFPBciYoWNhog9iYVEhJB47LGRIFiIRVmJV7VeCxuRCBbogg07oRZE2UkUG9oKrSpJ+5dJz6pR8ei9c74555fc5Oa+Z+a738yceXwiIYQQQgghhGAQMBZYCRwEbgDtQDfwQ2/p/gt9Lr1mBTAm9++uPGAecBx4x997CxwD5uZOR+UAM4DzwHf+X/qMZmB67nRVArAF6GL0dQKbc6fPLGA8cJHaa0nflTu9pgCTgVbq5276ztzptnTkt1J/94EJ4h31Oe2MpFk8A7aS3ybxCJgGfMyd+9ri8tdE1Xa+FU3iSeqdjlIna7Sk3zJfvNDwgjXHxIMUJNM4jTUp3jRWSqdRTasapHQaLrbqgJQOuIld16V0OnBi1XMpXY1CzaPlo5TOWPt/uH4pXRRAZnEKyiwq4cyiGZqZ8Y7YfimdTpqyark4CcZ1YM8bN7PpdMaaNY3ihcEBmX5gjnii0wWtOCPeAFONDMp3uhyUT4DNuXMf2CieMTRXM5ez4h1Diy9uZcj8O8C43Om3NDn3bh0z/3ZMzv31JN3mOmT+2TjyfwPYVKPW0Qf3Fe5fzhtt0g7S/0qfcSY1e3Onq3KAORq2+JfYUXpPo7sebg0DeA1p3k6K2aeBEx1Z+663dP+ZPrc/RTXdBNZCCCGEEEIIAViqXf+XQC/V16tpOQ0sEauAScAFYIByDegA0kQxmPkP8eOBqULQI9+bFjF0zi/5tDOSARN1gla4Xp20UACv8KvdQgH04FePhQJwTXLDOckN5yQ3oA+/vloogH/ZVrgUHRYKoA2/2nLnv7WFFv7CEcA2/NphoQCmAN/w5wcwUywAruLPdbECWOYsIjoIrBJLgMv4cU2MXvXCQ5+gy+wmr7oPRKqcSjUArBXLgO2F1geDwG6pAmBnYYUwCOySKkl/Vb2+V9V9qezaMmAh8ITqegoslgIWYu/RI6lKs+H2FrWcFZgFnDIetugDTpgJMdQCMBs4CrzHjrSi8nDRGT9c+nsD64ArwKdM29RcAta4uG7AH2xTsBo4ovMua1FfpEK+BxzSDmM55/carQteBGwA9ukFf9JmHo91c73uYYX0WR97DTzSnVDOaUW6HliQO00hhBBCCCGEIOoniic6n4GDV+cAAAAASUVORK5CYII=">
+          Entrar como usuário
+        </button>
+
+        <div class="divider">ou</div>
+
+        <button class="btn btn-admin">
+          <img src="data:image/png;base64,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">
+          Entrar como administrador
+        </button>
+
+        <div class="footer">
+          <a href="#">Suporte</a> – 
+          <a href="#">Termos de uso</a> – 
+          <a href="#">Políticas de privacidade</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
